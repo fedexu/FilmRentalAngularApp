@@ -1,0 +1,8 @@
+<div fxLayout="column" fxLayoutGap="0.5%" fxLayoutGap.xs="2%">
+    <div fxLayout="row">
+        <fr-search-film fxFlex="100%"></fr-search-film>
+    </div>
+    <div fxFlex="100%" fxLayout="row wrap" fxLayout.xs="column" fxLayoutGap="1% grid" fxLayoutGap.xs="3%" frPageScroll (scroll)="onScrool($event)" >
+        <fr-film-card fxFlex="20%" *ngFor="let film of films" [film]="film" (click)="openFilmDetail(film)"></fr-film-card>
+    </div>
+</div>

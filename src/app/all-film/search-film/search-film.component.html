@@ -1,0 +1,66 @@
+<mat-card class="no-padding">
+  <div fxLayout="row" fxFlex="100%" fxLayoutAlign="end" fxShow fxHide.xs fxLayoutGap="0.5%">
+    <mat-form-field fxFlex="10%" class="margin-top-small">
+      <mat-label>Anno</mat-label>
+      <mat-select value="">
+        <mat-option *ngFor="let year of years" [value]="year">
+          {{ year }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field fxFlex="10%" class="margin-top-small">
+      <input matInput placeholder="Genere">
+    </mat-form-field>
+    <mat-form-field fxFlex="10%" class="margin-top-small">
+      <input matInput placeholder="Rating">
+    </mat-form-field>
+    <mat-form-field fxFlex="20%" class="margin-top-small">
+      <input matInput placeholder="Cerca film">
+      <button mat-button matSuffix mat-icon-button aria-label="Cerca">
+        <mat-icon>search</mat-icon>
+      </button>
+    </mat-form-field>
+    <div fxFlex="2%"></div>
+  </div>
+
+  <div fxHide fxShow.xs fxLayout="column">
+
+    <div fxLayoutAlign.xs="center" fxLayout="row" class="margin-top-small">
+      <mat-form-field fxFlex.xs="80%">
+        <input matInput placeholder="Cerca film">
+        <button mat-button matSuffix mat-icon-button aria-label="Cerca">
+          <mat-icon>search</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+
+    <div fxLayout="row">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Ricerca avanzata
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <mat-form-field fxFlexFill>
+          <mat-label>Anno</mat-label>
+          <mat-select value="">
+            <mat-option *ngFor="let year of years" [value]="year">
+              {{ year }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field fxFlexFill>
+          <input matInput placeholder="Genere">
+        </mat-form-field>
+
+        <mat-form-field fxFlexFill>
+          <input matInput placeholder="Rating">
+        </mat-form-field>
+
+      </mat-expansion-panel>
+    </div>
+
+  </div>
+</mat-card>
